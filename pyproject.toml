@@ -1,0 +1,7 @@
+[project]
+name = "code"
+version = "0.1.0"
+description = "This project is by team Graph-hoppers and we are doing something here."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
