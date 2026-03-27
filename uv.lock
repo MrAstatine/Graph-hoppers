@@ -1,15 +1,9 @@
 version = 1
 revision = 3
-requires-python = ">=3.12.2"
+requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13'",
     "python_full_version < '3.13'",
-]
-
-[manifest]
-members = [
-    "code",
-    "dqn",
 ]
 
 [[package]]
@@ -421,11 +415,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/a9/95/a3dbbb5028f35eafb
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl", hash = "sha256:85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30", size = 8321, upload-time = "2023-10-07T05:32:16.783Z" },
 ]
-
-[[package]]
-name = "dqn"
-version = "0.1.0"
-source = { virtual = "DRL-GNN/DQN" }
 
 [[package]]
 name = "flatbuffers"

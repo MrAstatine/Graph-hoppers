@@ -17,15 +17,24 @@ import multiprocessing
 import time as tt
 import glob
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+# below line is to disable GPU, comment it out if you want to use GPU. Remember to also comment out the line in run_training.py
+# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 ENV_NAME = "GraphEnv-v1"
 graph_topology = 0  # 0==NSFNET, 1==GEANT2, 2==Small Topology, 3==GBN
 SEED = 37
+"""
 ITERATIONS = 10000
 TRAINING_EPISODES = 20
 EVALUATION_EPISODES = 40
 FIRST_WORK_TRAIN_EPISODE = 60
+"""
+ITERATIONS = 500  # just to verify everything works
+TRAINING_EPISODES = 5
+EVALUATION_EPISODES = 10
+FIRST_WORK_TRAIN_EPISODE = 10
+epsilon_start_decay = 15
+
 
 MULTI_FACTOR_BATCH = 6  # Number of batches used in training
 TAU = 0.08  # Only used in soft weights copy
