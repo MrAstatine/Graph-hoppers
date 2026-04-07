@@ -43,6 +43,7 @@ DATA_ROOT = "./data"
 # CLI
 # ---------------------------------------------------------------------------
 
+
 def get_args():
     p = argparse.ArgumentParser()
     p.add_argument("--gcn_ckpt", type=str, required=True)
@@ -59,6 +60,7 @@ def get_args():
 # ---------------------------------------------------------------------------
 # GCN Baseline evaluation
 # ---------------------------------------------------------------------------
+
 
 def perturb_graph(edge_index, ratio, num_nodes):
     ei, _ = dropout_edge(edge_index, p=ratio, force_undirected=True)
@@ -86,6 +88,7 @@ def eval_gcn(model, data, perturb_ratio=0.0):
 # ---------------------------------------------------------------------------
 # PPO Agent evaluation
 # ---------------------------------------------------------------------------
+
 
 def eval_ppo(agent, env_clean, env_ood, n_episodes=10):
     """
@@ -115,6 +118,7 @@ def eval_ppo(agent, env_clean, env_ood, n_episodes=10):
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
 
 def main():
     args = get_args()
@@ -177,7 +181,7 @@ def main():
     )
     ppo_latency = (time.time() - t0) * 1000
 
-    print(f"\nParadigm A (GNN->DRL / PPO)")
+    print("\nParadigm A (GNN->DRL / PPO)")
     print(f"  Clean Ep Reward (mean±std) : {ppo_clean_rew:.3f} ± {ppo_clean_std:.3f}")
     print(f"  OOD   Ep Reward (mean±std) : {ppo_ood_rew:.3f} ± {ppo_ood_std:.3f}")
     print(f"  OOD Reward Drop            : {ppo_clean_rew - ppo_ood_rew:.3f}")
@@ -186,27 +190,39 @@ def main():
     # ------------------------------------------------------------------
     # Save CSV summary
     # ------------------------------------------------------------------
-    out_path = "results/eval_results.csv"
+    out_path = "results/eval_results" + seed + ".csv"
     with open(out_path, "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["model", "clean_acc_or_rew", "ood_acc_or_rew",
-                    "ood_drop", "latency_ms", "perturb_ratio"])
-        w.writerow([
-            "GCN_baseline",
-            f"{gcn_clean:.4f}",
-            f"{gcn_ood:.4f}",
-            f"{gcn_clean - gcn_ood:.4f}",
-            f"{gcn_latency:.1f}",
-            args.perturb_ratio,
-        ])
-        w.writerow([
-            "ParadigmA_PPO",
-            f"{ppo_clean_rew:.4f}",
-            f"{ppo_ood_rew:.4f}",
-            f"{ppo_clean_rew - ppo_ood_rew:.4f}",
-            f"{ppo_latency:.1f}",
-            args.perturb_ratio,
-        ])
+        w.writerow(
+            [
+                "model",
+                "clean_acc_or_rew",
+                "ood_acc_or_rew",
+                "ood_drop",
+                "latency_ms",
+                "perturb_ratio",
+            ]
+        )
+        w.writerow(
+            [
+                "GCN_baseline",
+                f"{gcn_clean:.4f}",
+                f"{gcn_ood:.4f}",
+                f"{gcn_clean - gcn_ood:.4f}",
+                f"{gcn_latency:.1f}",
+                args.perturb_ratio,
+            ]
+        )
+        w.writerow(
+            [
+                "ParadigmA_PPO",
+                f"{ppo_clean_rew:.4f}",
+                f"{ppo_ood_rew:.4f}",
+                f"{ppo_clean_rew - ppo_ood_rew:.4f}",
+                f"{ppo_latency:.1f}",
+                args.perturb_ratio,
+            ]
+        )
 
     print(f"\n[INFO] Results saved to {out_path}")
 

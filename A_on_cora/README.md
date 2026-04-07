@@ -49,7 +49,7 @@
 ## Three-Seed Runs (for t-tests in the paper)
 
 ```bash
-for SEED in 42 0 1; do
+for SEED in 12 5 25; do
   python train_baseline.py    --seed $SEED
   python train_paradigmA.py   --gcn_ckpt models/gcn_baseline_seed${SEED}.pt --seed $SEED
 done
