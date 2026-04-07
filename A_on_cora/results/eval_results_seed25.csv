@@ -1,0 +1,3 @@
+model,clean_acc_or_rew,ood_acc_or_rew,ood_drop,latency_ms,perturb_ratio
+GCN_baseline,0.8000,0.7420,0.0580,37.5,0.15
+ParadigmA_PPO,20.7979,-2.9896,23.7875,22443.0,0.15
