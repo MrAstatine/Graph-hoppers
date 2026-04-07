@@ -41,7 +41,8 @@
 !python evaluate_paradigmA.py \
     --gcn_ckpt models/gcn_baseline_seed42.pt \
     --ppo_ckpt models/paradigmA_ppo_seed42/ppo_final \
-    --perturb_ratio 0.15
+    --perturb_ratio 0.15 \
+    --seed 42
 ```
 
 ---

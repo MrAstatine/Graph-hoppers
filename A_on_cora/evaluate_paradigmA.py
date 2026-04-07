@@ -190,7 +190,7 @@ def main():
     # ------------------------------------------------------------------
     # Save CSV summary
     # ------------------------------------------------------------------
-    out_path = "results/eval_results" + seed + ".csv"
+    out_path = "results/eval_results_seed" + str(seed) + ".csv"
     with open(out_path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(
