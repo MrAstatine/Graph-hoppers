@@ -1,0 +1,31 @@
+{
+  "paradigm": "B - DRL->GNN",
+  "dataset": "Cora",
+  "explainer": "GNNExplainer",
+  "seeds": {
+    "42": {
+      "test_acc": 0.768,
+      "fidelity_acc_minus_topk5": 0.7,
+      "fidelity_acc_minus_topk10": 0.7,
+      "time_per_node": 4.46
+    },
+    "43": {
+      "test_acc": 0.741,
+      "fidelity_acc_minus_topk5": 0.65,
+      "fidelity_acc_minus_topk10": 0.55,
+      "time_per_node": 4.3
+    },
+    "44": {
+      "test_acc": 0.73,
+      "fidelity_acc_minus_topk5": 0.85,
+      "fidelity_acc_minus_topk10": 0.8,
+      "time_per_node": 4.28
+    }
+  },
+  "mean": {
+    "test_acc": 0.746,
+    "fidelity_acc_minus_topk5": 0.733,
+    "fidelity_acc_minus_topk10": 0.683,
+    "time_per_node": 4.35
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "paradigm": "B",
+  "test_acc_mean": 0.7463,
+  "test_acc_std": 0.016,
+  "fidelity_acc+_mean": 0.7333,
+  "fidelity_acc+_std": 0.085,
+  "ttest_vs_chance": {
+    "t": 21.8204,
+    "p": 0.0021
+  }
+}

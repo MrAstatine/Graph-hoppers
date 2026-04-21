@@ -1,0 +1,59 @@
+{
+  "42": {
+    "test_acc": 0.768,
+    "fidelity": [
+      {
+        "fidelity_acc+": 0.15,
+        "fidelity_acc-": 0.7,
+        "fidelity_prob+": 0.03187546879053116,
+        "fidelity_prob-": 0.10749124735593796,
+        "topk": 5
+      },
+      {
+        "fidelity_acc+": 0.19,
+        "fidelity_acc-": 0.64,
+        "fidelity_prob+": 0.04562994837760925,
+        "fidelity_prob-": 0.10315557569265366,
+        "topk": 10
+      }
+    ]
+  },
+  "43": {
+    "test_acc": 0.751,
+    "fidelity": [
+      {
+        "fidelity_acc+": 0.21,
+        "fidelity_acc-": 0.7,
+        "fidelity_prob+": 0.022247323766350746,
+        "fidelity_prob-": 0.10348555445671082,
+        "topk": 5
+      },
+      {
+        "fidelity_acc+": 0.25,
+        "fidelity_acc-": 0.64,
+        "fidelity_prob+": 0.029971370473504066,
+        "fidelity_prob-": 0.10028187930583954,
+        "topk": 10
+      }
+    ]
+  },
+  "44": {
+    "test_acc": 0.73,
+    "fidelity": [
+      {
+        "fidelity_acc+": 0.14,
+        "fidelity_acc-": 0.78,
+        "fidelity_prob+": 0.029404684901237488,
+        "fidelity_prob-": 0.11835292726755142,
+        "topk": 5
+      },
+      {
+        "fidelity_acc+": 0.25,
+        "fidelity_acc-": 0.72,
+        "fidelity_prob+": 0.04104256257414818,
+        "fidelity_prob-": 0.11448784172534943,
+        "topk": 10
+      }
+    ]
+  }
+}

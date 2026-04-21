@@ -1,0 +1,53 @@
+{
+  "seed_42": {
+    "perturb_10pct": {
+      "clean_acc": 0.768,
+      "ood_acc": 0.75,
+      "acc_drop": 0.018
+    },
+    "perturb_15pct": {
+      "clean_acc": 0.768,
+      "ood_acc": 0.719,
+      "acc_drop": 0.049
+    },
+    "perturb_20pct": {
+      "clean_acc": 0.768,
+      "ood_acc": 0.721,
+      "acc_drop": 0.047
+    }
+  },
+  "seed_43": {
+    "perturb_10pct": {
+      "clean_acc": 0.752,
+      "ood_acc": 0.717,
+      "acc_drop": 0.035
+    },
+    "perturb_15pct": {
+      "clean_acc": 0.752,
+      "ood_acc": 0.706,
+      "acc_drop": 0.046
+    },
+    "perturb_20pct": {
+      "clean_acc": 0.752,
+      "ood_acc": 0.688,
+      "acc_drop": 0.064
+    }
+  },
+  "seed_44": {
+    "perturb_10pct": {
+      "clean_acc": 0.73,
+      "ood_acc": 0.725,
+      "acc_drop": 0.005
+    },
+    "perturb_15pct": {
+      "clean_acc": 0.73,
+      "ood_acc": 0.703,
+      "acc_drop": 0.027
+    },
+    "perturb_20pct": {
+      "clean_acc": 0.73,
+      "ood_acc": 0.665,
+      "acc_drop": 0.065
+    }
+  }
+}

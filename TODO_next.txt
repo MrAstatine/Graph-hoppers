@@ -1,0 +1,11 @@
+**Future Task Prompt for Paper Publication:**
+
+As an undergraduate researcher benchmarking DRL-GNN fusion paradigms (Paradigm A: GNN→DRL from https://github.com/knowledgedefinednetworking/DRL-GNN adapted for Cora node classification; GCN baseline using PyG) on the Cora Planetoid dataset (2.7K nodes, 5K edges, 80/10/10 split), implement and evaluate **OOD node perturbation robustness** to strengthen publication impact.
+
+**Specific Task:** Add node drop evaluation (10-20% random node removal + feature corruption) for both Paradigm A and GCN baseline, measuring accuracy drop under out-of-distribution perturbations. Include metrics: in-distribution accuracy, OOD accuracy drop percentage, convergence episodes to 90% baseline reward, and statistical significance (t-tests across 3 seeds).
+
+**Rationale:** The 2024 IEEE TNNLS survey identifies lack of systematic GNNDRL vs DRLGNN directionality comparisons under perturbations as a key reproducibility gap. OOD robustness evaluation reveals when Paradigm A wins (stability) vs GCN (speed), directly addressing the "first undergrad systematic comparison" innovation from your 1-pager. [ppl-ai-file-upload.s3.amazonaws](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_4766aa19-631d-4e92-8c60-c6a8193c5c71/3680aaf6-44d9-4b82-9587-c8c463402e25/rough1pager.docx)
+
+**Implementation:** In Google Colab (PyG + Stable-Baselines3 PPO), fork both repos, add `torch_geometric.transforms.RandomNodeSplit` for perturbation during eval, log to Weights&Biases. Compare perturbation sensitivity histograms showing fraction of nodes maintaining correct classification post-perturbation (ref: GNN sensitivity literature). [snap.stanford](https://snap.stanford.edu/class/cs224w-2019/project/26424139.pdf)
+
+Save this as "OOD_Node_Perturbation_Evaluation.md" for your publication TODO list.

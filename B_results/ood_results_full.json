@@ -1,0 +1,71 @@
+{
+  "seed_42": {
+    "perturb_10pct": {
+      "clean_acc": 0.768,
+      "edge_ood_acc": 0.736,
+      "edge_acc_drop": 0.032,
+      "node_ood_acc": 0.352,
+      "node_acc_drop": 0.416
+    },
+    "perturb_15pct": {
+      "clean_acc": 0.768,
+      "edge_ood_acc": 0.725,
+      "edge_acc_drop": 0.043,
+      "node_ood_acc": 0.274,
+      "node_acc_drop": 0.494
+    },
+    "perturb_20pct": {
+      "clean_acc": 0.768,
+      "edge_ood_acc": 0.705,
+      "edge_acc_drop": 0.063,
+      "node_ood_acc": 0.263,
+      "node_acc_drop": 0.505
+    }
+  },
+  "seed_43": {
+    "perturb_10pct": {
+      "clean_acc": 0.752,
+      "edge_ood_acc": 0.716,
+      "edge_acc_drop": 0.036,
+      "node_ood_acc": 0.343,
+      "node_acc_drop": 0.409
+    },
+    "perturb_15pct": {
+      "clean_acc": 0.752,
+      "edge_ood_acc": 0.716,
+      "edge_acc_drop": 0.036,
+      "node_ood_acc": 0.301,
+      "node_acc_drop": 0.451
+    },
+    "perturb_20pct": {
+      "clean_acc": 0.752,
+      "edge_ood_acc": 0.687,
+      "edge_acc_drop": 0.065,
+      "node_ood_acc": 0.241,
+      "node_acc_drop": 0.511
+    }
+  },
+  "seed_44": {
+    "perturb_10pct": {
+      "clean_acc": 0.73,
+      "edge_ood_acc": 0.709,
+      "edge_acc_drop": 0.021,
+      "node_ood_acc": 0.412,
+      "node_acc_drop": 0.318
+    },
+    "perturb_15pct": {
+      "clean_acc": 0.73,
+      "edge_ood_acc": 0.689,
+      "edge_acc_drop": 0.041,
+      "node_ood_acc": 0.243,
+      "node_acc_drop": 0.487
+    },
+    "perturb_20pct": {
+      "clean_acc": 0.73,
+      "edge_ood_acc": 0.684,
+      "edge_acc_drop": 0.046,
+      "node_ood_acc": 0.26,
+      "node_acc_drop": 0.47
+    }
+  }
+}
