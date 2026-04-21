@@ -25,7 +25,7 @@
 !pip install torch-geometric stable-baselines3[extra] wandb -q
 
 # Cell 2 – Clone your fork
-!git clone https://github.com/YOUR_USERNAME/graph-hoppers
+!git clone https://github.com/MrAstatine/Graph-hoppers
 %cd graph-hoppers/paradigmA_cora
 
 # Cell 3 – Train GCN baseline (Phase II)
