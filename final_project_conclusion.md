@@ -1,7 +1,7 @@
 # Final Project Conclusion: Paradigm A vs Paradigm B
 
 ## Project outcome
-This project compared two hybrid DRL-GNN pipelines on the Cora dataset using the attached result files. Paradigm A was reported through three CSV evaluation files, while Paradigm B was reported through summary, fidelity, and OOD JSON outputs.
+This project compared two hybrid DRL-GNN pipelines on the Cora dataset using the attached result files. Paradigm A was reported through accuracy, OOD drop and latency while Paradigm B was reported through summary, time per node and fidelity outputs.
 
 The results indicate that **Paradigm B** is the more reliable and publication-ready pipeline for this project. Its test accuracy is stable around 0.746 across seeds, its 15% perturbation OOD accuracy remains around 0.709, and its explanation fidelity and per-node runtime are consistent enough to support a strong final conclusion.
 
@@ -14,9 +14,9 @@ The results indicate that **Paradigm B** is the more reliable and publication-re
 ![Paradigm B fidelity](paradigm_b_fidelity.png)
 
 ## Paradigm A results
-Paradigm A was evaluated on seeds 5, 12, and 25. The attached CSV files show a conventional GCN baseline and a PPO-based ParadigmA agent side by side.
+Paradigm A was evaluated on seeds 5, 12, and 25. It displays a conventional GCN baseline and a PPO-based ParadigmA agent side by side.
 
-### Seed-wise results from CSV files
+### Seed-wise results for paradigm A (GNN → DRL)
 | Seed | Model | Clean acc/reward | OOD acc/reward | OOD drop | Latency (ms) |
 |---|---|---:|---:|---:|---:|
 | 5 | GCN_baseline | 0.7980 | 0.7410 | 0.0570 | 26.0 |
@@ -38,7 +38,7 @@ The baseline behaves like a standard node-classification model, with clean accur
 A second important observation is latency. The GCN baseline stays in the tens to low hundreds of milliseconds, while Paradigm A PPO ranges from about 16,000 ms to 48,000 ms, making it far more expensive computationally.
 
 ## Paradigm B results
-Paradigm B was reported as a DRL→GNN pipeline with GNNExplainer on Cora.
+Paradigm B was reported as a DRL → GNN pipeline with GNNExplainer on Cora.
 
 ### Core summary
 | Metric | Value |
@@ -87,11 +87,10 @@ These results show a clear pattern: Paradigm B remains fairly stable under edge 
 The fidelity table suggests that removing important explanatory structure hurts performance much more than retaining it alone can recover performance. In practical terms, this supports the claim that the learned explanations capture genuinely influential graph structure.
 
 ## Direct comparison
-Because the Paradigm A CSV files mix baseline accuracy with PPO reward-style outputs, the cleanest comparison is between Paradigm A's baseline-like classification behavior and Paradigm B's directly reported test/OOD accuracy.
+Because the Paradigm A is mixed with baseline accuracy with PPO reward-style outputs, the cleanest comparison is between Paradigm A's baseline-like classification behavior and Paradigm B's directly reported test/OOD accuracy.
 
 | Aspect | Paradigm A | Paradigm B |
 |---|---|---|
-| Main reporting format | CSV evaluation files | JSON summaries, fidelity, OOD files |
 | Main predictive metric | Mixed: baseline accuracy plus PPO reward-style outputs | Direct test accuracy |
 | Mean clean/test performance | Baseline clean = 0.791; PPO field = 17.135 | Test accuracy = 0.746 |
 | OOD behavior | Baseline OOD = 0.744; PPO field unstable for direct accuracy reading | 15% OOD accuracy = 0.709 |
@@ -104,4 +103,4 @@ Two conclusions follow from this comparison. First, Paradigm B provides a much s
 ## Final conclusion
 The project conclusion is that Paradigm B is the stronger final model for this study. It achieves mean test accuracy of 0.7463, preserves reasonable OOD performance under graph perturbations, and provides explanation-level evidence through fidelity analysis.
 
-Paradigm A shows that reinforcement learning can be integrated into the pipeline, but the attached metrics suggest a mismatch between reward reporting and standard classification evaluation. For a research-paper conclusion, the most defensible claim is that the DRL→GNN design in Paradigm B is more stable, more interpretable, and easier to evaluate rigorously than the Paradigm A setup provided here.
+Paradigm A shows that reinforcement learning can be integrated into the pipeline, but the attached metrics suggest a mismatch between reward reporting and standard classification evaluation. Conclusion, the most defensible claim is that the DRL→GNN design in Paradigm B is more stable, more interpretable, and easier to evaluate rigorously than the Paradigm A setup provided here.
